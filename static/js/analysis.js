@@ -10,7 +10,7 @@ function analysisFeatures() {
 			// Sending and receiving data in JSON format using POST mothod
 			//
 			xhr = new XMLHttpRequest();
-			var url = "http://localhost:5000/classification/status";
+			var url = "http://54.202.132.105:5000/classification/status";
 			xhr.open("POST", url, true);
 			xhr.setRequestHeader("Content-type", "application/json");
 			xhr.onreadystatechange = function () { 
@@ -36,7 +36,7 @@ function analysisFeatures() {
 
 function trainForests(){
 	xhr = new XMLHttpRequest();
-	var url = "http://localhost:5000/classification";
+	var url = "http://54.202.132.105:5000/classification";
 	xhr.open("GET", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
 	xhr.onreadystatechange = function () { 

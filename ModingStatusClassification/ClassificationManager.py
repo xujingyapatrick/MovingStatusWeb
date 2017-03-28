@@ -11,7 +11,7 @@ import decimal
 from botocore.exceptions import ClientError
 import pandas as pd
 import pickle
-from ModingStatusClassification.RandomForestGene import RandomForestGene
+from RandomForestGene import RandomForestGene
 
 # from database_setup import Base, Music
 # Helper class to convert a DynamoDB item to JSON.

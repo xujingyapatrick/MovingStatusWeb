@@ -1,0 +1,30 @@
+##
+# You should look at the following URL's in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# http://wiki.nginx.org/Pitfalls
+# http://wiki.nginx.org/QuickStart
+# http://wiki.nginx.org/Configuration
+#
+# Generally, you will want to move this file somewhere, and start with a clean
+# file but keep this around for reference. Or just disable in sites-enabled.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+
+server {
+      	listen  80;
+	#server_name:0.0.0.0;
+      	server_name 54.202.132.105;
+	root /home/ubuntu/virtualenv/MovingStatusWeb/ModingStatusClassification/static;
+      location / {
+        include      uwsgi_params;
+        uwsgi_pass   0.0.0.0:5000;
+        uwsgi_param UWSGI_PYHOME /home/ubuntu/virtualenv/venv;
+        uwsgi_param UWSGI_CHDIR  /home/ubuntu/virtualenv/MovingStatusWeb;
+        uwsgi_param UWSGI_SCRIPT manage:app;
+      }
+}
+

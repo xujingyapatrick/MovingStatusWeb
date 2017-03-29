@@ -2,10 +2,6 @@ from flask import Blueprint
 from flask import Flask, request, jsonify
 import json
 from ClassificationManager import ClassificationManager
-# from time import sleep, time
-# from sys import getsizeof
-
-#init classifiers
 classifier=ClassificationManager()
 
 
